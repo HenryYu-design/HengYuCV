@@ -1,0 +1,209 @@
+/* reset default CSS setting*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* setting of html attribute */
+a {
+    color: var(--grey40);
+}
+
+a:hover {
+    color: var(--green60);
+}
+
+main {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    padding-top: 127px;
+}
+
+
+/* atomic tokens*/
+:root {
+    font-family: 'Noto Sans SC', sans-serif;
+    /* color */
+    /* green */
+    --green60: #288B32;
+    /* grey */
+    --grey20: #2E2E2E;
+    --grey40: #666666;
+    --grey60: #999999;
+    --grey90: #E6E6E6;
+}
+
+
+
+/* font */
+h1 {
+    font-weight: 400;
+    color: var(--green60);
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: var(--green60);
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    color: var(--grey20);
+
+}
+
+h4 {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 23px;
+    color: var(--grey20);
+
+}
+
+p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.10em;
+    color: var(--grey40);
+}
+
+h6 {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    color: var(--grey40);
+}
+
+
+
+
+
+/* component */
+
+.btn-float {
+    position: fixed;
+    right: 24px;
+    bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: index 5;
+    color: white;
+    background: radial-gradient(106.91% 100.49% at 27.68% 7.4%, #23C562 0%, #77D21C 55.39%, #17DCD0 100%);
+    font-size: 14px;
+    padding: 12px 20px;
+    border: 0px;
+    border-radius: 64px;
+
+    transition: bottom 0.5s ease-in-out;
+}
+
+
+header {
+    position: fixed;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 24px 24px 0px;
+    width: 100%;
+    background-color: white;
+
+    height: 95px;
+    top: 0;
+    transition: top 0.5s ease-in-out;
+}
+
+#insideHeader {
+    border-bottom: 0.5px solid var(--green60);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: 800px;
+    width: 100%;
+
+    padding-bottom: 24px;
+}
+
+
+
+
+.thumbnail {
+    border: 0.5px solid var(--grey90);
+    border-radius: 4px;
+    width: 180px;
+    height: 96px;
+
+}
+
+.thumbnail:hover {
+    border: 0.5px solid var(--green60);
+    border-radius: 4px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 180px;
+    height: 96px;
+
+}
+
+
+.tag {
+    font-size: 14px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    border: 1px solid;
+    border-radius: 24px;
+    border: 1px solid var(--green60);
+    padding: 2px 12px 4px;
+    color: var(--green60);
+}
+
+#tagGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* responsive, use for responsive part */
+.responsive {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    min-width: 202px;
+    max-width: 202px;
+
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+@media (min-width:960px) {
+    .responsive {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 32px;
+    }
+}
